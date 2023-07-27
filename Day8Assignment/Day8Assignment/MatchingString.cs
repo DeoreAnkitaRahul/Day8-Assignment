@@ -9,14 +9,16 @@ namespace Day8Assignment
 {
     public class MatchingString
     {
-        public void MethodString()
+        public void MethodSequence()
         {
-            string input1 = "abb";      // Match
-            string input2 = "abbb";     // Match
-            string input3 = "abtfui";    // No match
-            string input4 = "acbb";     // No match
+            string input1 = "hello_world";    // Match
+            string input2 = "helloWorld";     // No match
+            string input3 = "hello_World";    // No match
+            string input4 = "hello__world";   // No match
+            string input5 = "Ankita_Patil";   // Match
+            string input6 = "Ankita_Patil";   // No match
 
-            string pattern = @"ab{2,3}";
+            string pattern = @"[a-z]+(_[a-z]+)+";
 
             Console.WriteLine("Matching pattern: " + pattern);
             Console.WriteLine();
@@ -25,6 +27,8 @@ namespace Day8Assignment
             MatchString(input2, pattern);
             MatchString(input3, pattern);
             MatchString(input4, pattern);
+            MatchString(input5, pattern);
+            MatchString(input6, pattern);
         }
 
         public static void MatchString(string input, string pattern)

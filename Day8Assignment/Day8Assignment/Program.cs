@@ -11,7 +11,7 @@ namespace Day8Assignment
         static void Main(string[] args)
         {
             MatchingString matchingString = new MatchingString();
-            matchingString.MethodString();
+            matchingString.MethodSequence();
             Console.ReadLine();
         }
     }
